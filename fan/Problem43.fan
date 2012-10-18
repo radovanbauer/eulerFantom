@@ -19,7 +19,7 @@ class Problem43 {
     if (a == -1) return null
     b := a + 1
     for (i := a + 1; i < perm.size; i++) {
-      if (perm[i] > perm[a] && perm[i] < perm[b]) {
+      if (perm[i] > perm[a] && perm[i] <= perm[b]) {
         b = i
       }
     }
