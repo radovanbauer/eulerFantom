@@ -58,6 +58,14 @@ const class IntFrac {
     return div(IntFrac(b))
   }
 
+  static IntFrac sum(IntFrac[] intFracs) {
+    return intFracs.reduce(zero, |IntFrac acc, IntFrac frac -> IntFrac| { acc + frac })
+  }
+
+  static IntFrac prod(IntFrac[] intFracs) {
+    return intFracs.reduce(one, |IntFrac acc, IntFrac frac -> IntFrac| { acc * frac })
+  }
+
   override Int compare(Obj obj) {
     IntFrac b := obj
     return n * b.d <=> b.n * d

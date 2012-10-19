@@ -42,6 +42,10 @@ const class DecFrac {
     return decFracs.reduce(zero, |DecFrac acc, DecFrac frac -> DecFrac| { acc + frac })
   }
 
+  static DecFrac prod(DecFrac[] decFracs) {
+    return decFracs.reduce(one, |DecFrac acc, DecFrac frac -> DecFrac| { acc * frac })
+  }
+
   override Int compare(Obj obj) {
     DecFrac b := obj
     return n * b.d <=> b.n * d
