@@ -46,6 +46,14 @@ const class DecFrac {
     return decFracs.reduce(one, |DecFrac acc, DecFrac frac -> DecFrac| { acc * frac })
   }
 
+  Decimal toDecimal() {
+    return n / d
+  }
+
+  Float toFloat() {
+    return toDecimal.toFloat
+  }
+
   override Int compare(Obj obj) {
     DecFrac b := obj
     return n * b.d <=> b.n * d
